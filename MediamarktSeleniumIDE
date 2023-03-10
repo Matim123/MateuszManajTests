@@ -1,0 +1,115 @@
+{
+  "id": "427dbe0e-1270-4f5a-b06a-6eaf8da0da75",
+  "version": "2.0",
+  "name": "Mateuszm",
+  "url": "https://mediamarkt.pl",
+  "tests": [{
+    "id": "036378b4-7e00-41b7-9afe-d4f062dd7ee6",
+    "name": "Untitled",
+    "commands": [{
+      "id": "0993f655-ddd7-46ce-9ce9-24bc4bd4bbc6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8e526d9-dbe1-4299-a1e6-e6a06ae7163a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "798x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e33a0ef-5c5e-48ef-9fb8-9fcacbcbeec5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-inner",
+      "targets": [
+        ["css=.input-inner", "css:finder"],
+        ["xpath=//input[@id='']", "xpath:attributes"],
+        ["xpath=//div[@id='spark']/div[2]/div[2]/div[2]/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bac79d23-9b0e-4b42-a787-413cfae4217a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-inner",
+      "targets": [
+        ["css=.input-inner", "css:finder"],
+        ["xpath=//input[@id='']", "xpath:attributes"],
+        ["xpath=//div[@id='spark']/div[2]/div[2]/div[2]/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "głośnik"
+    }, {
+      "id": "5a15e58a-16fa-4ca8-a6e1-d8741e19f949",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.input-inner",
+      "targets": [
+        ["css=.input-inner", "css:finder"],
+        ["xpath=//input[@id='']", "xpath:attributes"],
+        ["xpath=//div[@id='spark']/div[2]/div[2]/div[2]/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c295ff1b-bcd5-42b8-bcb8-299f7fff19e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.offer:nth-child(1) > .pricing #show-price-add-to-cart-btn > span",
+      "targets": [
+        ["css=.offer:nth-child(1) > .pricing #show-price-add-to-cart-btn > span", "css:finder"],
+        ["xpath=(//button[@id='show-price-add-to-cart-btn']/span)[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]/div/div[3]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1cccdd3-a98a-40a6-a454-c5d46938d8d0",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.dialog",
+      "targets": [
+        ["css=.dialog", "css:finder"],
+        ["xpath=//div[@id='spark']/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "772,393"
+    }, {
+      "id": "94fb8ee2-62ff-424f-9723-ad5f494df2d7",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.dialog",
+      "targets": [
+        ["css=.dialog", "css:finder"],
+        ["xpath=//div[@id='spark']/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "772,393"
+    }, {
+      "id": "ea6d0777-ee2c-4acb-9c0c-43cccb86ec09",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.dialog",
+      "targets": [
+        ["css=.dialog", "css:finder"],
+        ["xpath=//div[@id='spark']/div[3]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "772,393"
+    }]
+  }],
+  "suites": [{
+    "id": "bc813da9-31fb-4853-a2bb-063ac8409bce",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["036378b4-7e00-41b7-9afe-d4f062dd7ee6"]
+  }],
+  "urls": ["https://mediamarkt.pl/"],
+  "plugins": []
+}
