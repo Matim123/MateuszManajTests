@@ -1,4 +1,4 @@
-Raport z defektów 
+Raport z defektów występujących w pliku PDF
 
 
 
