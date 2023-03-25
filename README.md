@@ -1,4 +1,4 @@
-Raport z defektów występujących w pliku PDF
+Raport z defektów występujących w specyfikacji zawartej w pliku: Specyfikacja_Mr_Buggy_3.pdf
 
 
 
