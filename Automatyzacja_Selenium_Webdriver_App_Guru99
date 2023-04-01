@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 public class Guru99TestApp {private WebDriver driver;
     WebDriverWait wait;
     Logger logger;
-    @Before
+@Before
     public void setUp()
     {
         logger = Logger.getLogger("TestAutomation");
@@ -41,17 +41,50 @@ public class Guru99TestApp {private WebDriver driver;
         WebElement acceptCookies = driver.findElement(By.xpath("//*[@id='save']/span[1]/div/span"));
         acceptCookies.click();
         driver.switchTo().defaultContent();
+    @Test
+public void logInTest()
+{
+    WebElement userIdTxtBox = driver.findElement(By.name("uid"));
+    userIdTxtBox.sendKeys("MateuszMannn");
+    WebElement pswdTxt = driver.findElement(By.name("password"));
+    pswdTxt.sendKeys("MateuszMannnn123");
+    WebElement loginBtn = driver.findElement(By.name("btnLogin"));
+    loginBtn.click();
+}
+
+
+public void logIn(String name, String pswd, Boolean isPswdCorrect)
+{
+    WebElement userIdTxtBox = driver.findElement(By.name("uid"));
+    userIdTxtBox.sendKeys(name);
+    WebElement pswdTxt = driver.findElement(By.name("password"));
+    pswdTxt.sendKeys(pswd);
+    WebElement loginBtn = driver.findElement(By.name("btnLogin"));
+    loginBtn.click();
+    if(isPswdCorrect)
+    {
+        WebElement welcomeMsg =
+                driver.findElement(By.xpath("/td[@style='color: green']"));
+        String welcomeTxt = welcomeMsg.getText();
+        String expectedTxt = "Manger Id : " + name;
+        Assert.assertEquals(expectedTxt, welcomeTxt);
+    }
+    else
+    {
+        driver.switchTo().alert().accept();
+        loginBtn = driver.findElement(By.name("btnLogin"));
+        Assert.assertEquals(true, loginBtn.isDisplayed());
     }
 
-    @Test
-    publin void dummy()
-    {
-        Web element userIdTxtBox = driver.findElement(By.name("uid"));  
-        userIdTxtBox.sendKeys(keysToSend:"MatMan");
-    }
-    @After
-    public void tearDown()
-    {
-        driver.close();
-    }
+}
+
+@Test
+public void logInHappyPath()
+{
+    logIn("MateuszMannn", "MateuszMannn123", true);
+}
+
+public void logInFailed()
+{
+    logIn("MateuszMannn", "MateuszMannn123", false);
 }
