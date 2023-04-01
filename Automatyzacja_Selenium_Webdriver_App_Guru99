@@ -46,7 +46,8 @@ public class Guru99TestApp {private WebDriver driver;
     @Test
     publin void dummy()
     {
-
+        Web element userIdTxtBox = driver.findElement(By.name("uid"));  
+        userIdTxtBox.sendKeys(keysToSend:"MatMan");
     }
     @After
     public void tearDown()
