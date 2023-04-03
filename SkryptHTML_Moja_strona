@@ -18,9 +18,53 @@
 	<div>Zapraszam także do obejrzenia krótkiego filmiku, w którym osobiście poinstruuję jak korzystać sprawnie z mojego sklepu. Filmik znajduje się poniżej<div>
 	<embed scr=”C:/Filmy/Sklep..ra” width=”400” height=”300”><br><br>
 	<h2>Zapoznaj się z asortymentem!</h2><br>
-		<table>
+	
+	<table>
+	<caption>Obecnie dostępne modele</caption>
+	<colgroup span="2" style="background-color: green"></colgroup>
 	<tr>
-	<td></td>	<td></td>	<td></td>
+	    <th colpan="2">Model</th>     <th>Xiaomi Redmi 8</th>     <th>iPhone10</th>     <th>iPhone 11 Pro</th>     <th>iPhone 12 Pro</th>
+>       </tr>
+	<tr>
+	    <th rowspan="8">Specyfikacja</th>     <th>Wyświetlacz</th>     <td>2400 x 1080px</td>     <td>1792 x 828px</td>     <td>1792 x 828px</td>     <td>2532 x 1170px</td>
+        </tr>
+	<tr>
+		<th>Pamięć RAM</th>    	 <td>6 GB</td>     <td>4 GB</td>     <td>4 GB</td>     <td>4 GB</td>
+	</tr>
+	<tr>
+		<th>Pamięć wbudowana [GB]</th>    	 <td>128</td>     <td>64</td>     <td>64</td>     <td>128</td>	
+	</tr>
+	<tr>
+		<th>Pojemność akumulatora [mAh]</th>    	 <td>5000</td>     <td>3110</td>     <td>3160</td>     <td>3110</td>
+	</tr>
+	<tr>
+		<th>Procesor</th>    	 <td>Ośmiordzeniowy</td>     <td>Sześciordzeniowy</td>     <td>Sześciordzeniowy</td>     <td>Sześciordzeniowy</td>
+	</tr>
+	<tr>
+		<th>Aparat</th>    	 <td>Tylny 50 Mpx + 8 Mpx + 2 Mpx, Przedni 16 Mpx</td>     <td>Tylny 2 x 12 Mpx, Przedni 12 Mpx</td>     <td>Tylny 2 x 12 Mpx, Przedni 12 Mpx</td>     <td>Tylny 2 x 12 Mpx, Przedni 12 Mpx</td>
+	</tr>
+	<tr>
+		<th>Komunikacja</th>    	 <td>5G, Wi-Fi, NFC, Bluetooth 5.2, USB typ C</td>     <td>Wi-Fi, NFC, Bluetooth 5.0, Złącze Lightning</td>     <td>Wi-Fi, NFC, Bluetooth 5.0, Złącze Lightning</td>     <td>5G, Wi-Fi, NFC, Bluetooth 5.0, Złącze Lightning</td>
+	</tr>
+	<tr>
+		<th>Wersja systemu</th>    	 <td>Android 12</td>     <td>iOS 13</td>     <td>iOS 13</td>     <td>iOS 14</td>
+	</tr>
+	<tr>
+		<th rowspan="3">Dodatkowe</th>     <th>Stan</th>     <td>Bdb</td>     <td>db</td>     <td>db</td>     <td>Bdb</td>     
+	</tr>
+	<tr>
+		<th>Ile używany</th>     <td>3 dni</td>     <td>15 dni</td>     <td>15 dni</td>     <td>5 dni</td>
+	</tr>
+	<tr>
+		<th>Dostępność</th>     <td>tak</td>     <td>tak</td>     <td>tak</td>     <td>tak</td>
+	</tr>
+	
+	</table>
+	    
+	  
+	
+	
+	
 
 
 
