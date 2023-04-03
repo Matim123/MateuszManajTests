@@ -60,6 +60,32 @@
 	</tr>
 	
 	</table>
+	
+	<br><br><br>
+	
+	<form action="mailto:matman@onet.pl" subject="Formularz kontaktowy" enctype="text/plain" method="post">
+		<input type="hidden" name="adres_strony" value="http://sklep.tel.uzywane.pl">
+		<input type="text" name="Imię i nazwisko">
+		<input type="text" name="Miejscowość">
+		<input type="text" name="Kod pocztowy">
+		<input type="text" name="Numer telefonu">
+		<input type="text" name="Adres email">
+			<select name="Wybierz model">
+				<option></option>
+				<option></option>
+				<option></option>
+				<option></option>
+			
+		
+	
+	
+	
+	
+	
+	
+	</form>
+	
+	
 	    
 	  
 	
