@@ -23,7 +23,7 @@
 	<caption>Obecnie dostępne modele</caption>
 	<colgroup span="2" style="background-color: green"></colgroup>
 	<tr>
-	    <th colpan="2">Model</th>     <th>Xiaomi Redmi 8</th>     <th>iPhone10</th>     <th>iPhone 11 Pro</th>     <th>iPhone 12 Pro</th>
+	    <th colpan="2">Model</th>     <th>Xiaomi Redmi 8</th>     <th>iPhone 10</th>     <th>iPhone 11 Pro</th>     <th>iPhone 12 Pro</th>
 >       </tr>
 	<tr>
 	    <th rowspan="8">Specyfikacja</th>     <th>Wyświetlacz</th>     <td>2400 x 1080px</td>     <td>1792 x 828px</td>     <td>1792 x 828px</td>     <td>2532 x 1170px</td>
@@ -62,20 +62,35 @@
 	</table>
 	
 	<br><br><br>
-	
-	<form action="mailto:matman@onet.pl" subject="Formularz kontaktowy" enctype="text/plain" method="post">
+	<b>Uzupełnij i prześlij formularz, a ja skontaktuję się z Tobą w przeciągu 7 dni drogą telefoniczną lub mailową :)</b>
+	<br>
+	<form action="mailto:matman@onet.pl" subject="Formularz kontaktowy" enctype="text/plain" method="post" onreset="if (!confirm('Czy napewno chcesz wyczyścić wszystkie dane w formularzu?)) return false">
 		<input type="hidden" name="adres_strony" value="http://sklep.tel.uzywane.pl">
+			<fieldset>
 		<input type="text" name="Imię i nazwisko">
 		<input type="text" name="Miejscowość">
 		<input type="text" name="Kod pocztowy">
 		<input type="text" name="Numer telefonu">
 		<input type="text" name="Adres email">
-			<select name="Wybierz model">
-				<option></option>
-				<option></option>
-				<option></option>
-				<option></option>
+			</fieldset>
+			<fieldset>
+			<select name="Wybierz model" multiple>
+				<option>Xiaomi Redmi 8</option>
+				<option>iPhone 10</option>
+				<option>iPhone 11 Pro</option>
+				<option>iPhone 12 Pro</option>
+			</select>
+			</fieldset>
+		<textarea name="Dodatkowe uwagi bądź pytania" cols="4" rows="4">Uwaga bądź pytanie</textarea>
 			
+		<input type="submit" value="Wyślij">
+		<input type="reset" value="Wyczyść dane">
+	</form>
+	<br><hr><br>
+	<p style="text-align: center">Moje dane kontaktowe</p><br>
+	<b>Telefon:</b> 123456789<br><b>Email:</b> matman@onet.pl
+</body>
+</html>
 		
 	
 	
@@ -83,7 +98,7 @@
 	
 	
 	
-	</form>
+	
 	
 	
 	    
