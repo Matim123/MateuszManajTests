@@ -53,6 +53,7 @@ public class Main {
                     System.out.println("Skłądniki: ziemniaki, kotlet schabowy, kapusta, koperek, kompot z owoców");
                     System.out.println("Poziom trudności: Średni");
                     System.out.println("Czy posiłek jest wegański? nie");
+                    System.out.println();
 
                     cookingApp.displayMeals();
                     break;
@@ -99,6 +100,7 @@ public class CookingApp {
 
         System.out.println("Czy posiłek jest wegański? (Y/N)");
         String isVeganString = scanner.nextLine();
+        System.out.println("Danie zostało pomyślnie dodane :)");
 
         boolean isVegan;
 
