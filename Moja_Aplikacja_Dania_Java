@@ -1,0 +1,195 @@
+Main.java
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean shouldContinue = true;
+
+        CookingApp cookingApp = new CookingApp();
+
+        while (shouldContinue) {
+            System.out.println("Wybierz opcję");
+            System.out.println("1. Poznajmy się:D");
+            System.out.println("2. Wyświetl listę potraw");
+            System.out.println("3. Dodaj swoją potrawę");
+            System.out.println("4. Znajdź potrawę którą dodałeś na podstawie podanych składników - wpisz składniki po przecinku");
+            System.out.println("5. Wylosuj potrawę");
+            System.out.println("6. Kończymy na dziś!:)");
+
+            int userChoice = scanner.nextInt();
+
+            switch (userChoice) {
+                case 1:
+                    System.out.println("Cześć! Jestem tutaj, aby pomóć Ci w zgromadzeniu swoich pomysłów na przerózne dania. Możesz wyszukać swoje pomysły poprzez wpisanie potrzebnych składników. W liście dań masz także podane popularne pomysły kulinarne od nas;). Mogę także samodzielnie wylosować Ci któreś z Twoich dań! Jeśli chcesz, abym towarzyszył Ci w dzisiejszej przygodzie kulinarnej, wybierz następne opcje!:)");
+                    break;
+                case 2:
+                    System.out.println("Oto lista potraw");
+                    System.out.println();
+                    System.out.println("Danie: Spaghetti");
+                    System.out.println("Składniki: makaron, sos pomidorowy, mięso, ser, przyprawy, oliwa");
+                    System.out.println("Poziom trudności: Łatwy");
+                    System.out.println("Czy posiłek jest wegański? nie");
+                    System.out.println();
+                    System.out.println("Danie: Naleśniki");
+                    System.out.println("Składniki: mąka, jaja, mleko, olej, cukier, proszek do pieczenia");
+                    System.out.println("Poziom trudności: Łatwy");
+                    System.out.println("Czy posiłek jest wegański? nie");
+                    System.out.println();
+                    System.out.println("Danie: Zupa");
+                    System.out.println("Składniki: Makaron, woda, mięso, śmietana, warzywa, przyprawy");
+                    System.out.println("Poziom trudności: Średni");
+                    System.out.println("Czy posiłek jest wegański? nie");
+                    System.out.println();
+                    System.out.println("Danie: Gofry");
+                    System.out.println("Składniki: Ciasto na gofry, bita śmietana, frużelina, owoce");
+                    System.out.println("Poziom trudności: Łatwy");
+                    System.out.println("Czy posiłek jest wegański? nie");
+                    System.out.println();
+                    System.out.println("Danie: Obiad staropolski");
+                    System.out.println("Skłądniki: ziemniaki, kotlet schabowy, kapusta, koperek, kompot z owoców");
+                    System.out.println("Poziom trudności: Średni");
+                    System.out.println("Czy posiłek jest wegański? nie");
+
+                    cookingApp.displayMeals();
+                    break;
+                case 3:
+                    cookingApp.addMeal();
+                    break;
+                case 4:
+                    cookingApp.displayMealByIngredients();
+                    break;
+                case 5:
+                    cookingApp.chooseNumber();
+                    break;
+                case 6:
+                    System.out.println("Do zobaczenia:)");
+                    shouldContinue = false;
+                    break;
+            }
+        }
+    }
+}
+
+
+
+CookingApp.java
+
+
+
+import java.util.*;
+
+public class CookingApp {
+    private List<Ingredients> meals = new ArrayList<>();
+    private Map<String, Ingredients> ingredientsOfMeal = new HashMap<>();
+    Scanner scanner = new Scanner(System.in);
+
+    public void addMeal() {
+        System.out.println("Podaj nazwę posiłku");
+        String name = scanner.nextLine();
+
+        System.out.println("Podaj listę składników");
+        String needIngredients = scanner.nextLine();
+
+        System.out.println("Wpisz poziom trudności: Łatwy/Średni/Trudny");
+        String difficultyLevel = scanner.nextLine();
+
+        System.out.println("Czy posiłek jest wegański? (Y/N)");
+        String isVeganString = scanner.nextLine();
+
+        boolean isVegan;
+
+        if (isVeganString.equals("Y")) {
+            isVegan = true;
+        } else {
+            isVegan = false;
+        }
+
+
+        Ingredients ingredients = new Ingredients(name, needIngredients, difficultyLevel, isVegan);
+        ingredientsOfMeal.put(needIngredients, ingredients);
+        meals.add(ingredients);
+    }
+
+    public void displayMealByIngredients() {
+        System.out.println("Wpisz składniki po przecinku");
+        String needIngredients = scanner.nextLine();
+        Ingredients ingredients = ingredientsOfMeal.get(needIngredients);
+
+        ingredients.displayMealInformation();
+    }
+
+    public void displayMeals() {
+        for (Ingredients meal : meals) {
+            meal.displayMealInformation();
+        }
+    }
+
+    public void chooseNumber() {
+        Random random = new Random();
+        int choseNumber = random.nextInt(5) + 1;
+        if (choseNumber == 1) {
+            System.out.println("Wybrano Spaghetti. Kliknij '2', aby zobaczyć danie na liście");
+        } else if (choseNumber == 2) {
+            System.out.println("Wybrano Naleśniki. Kliknij '2', aby zobaczyć danie na liście");
+        } else if (choseNumber == 3) {
+            System.out.println("Wybrano Zupa. Kliknij '2', aby zobaczyć danie na liście");
+        } else if (choseNumber == 4) {
+            System.out.println("Wybrano Gofry. Kliknij '2', aby zobaczyć danie na liście");
+        } else {
+            System.out.println("Wybrano Obiad staropolski. Kliknij '2', aby zobaczyć danie na liście");
+        }
+    }
+}
+
+
+
+Ingredients.java
+
+
+
+public class Ingredients {
+    private String name;
+    private String needIngredients;
+    private String difficultyLevel;
+    private boolean isVegan;
+
+    public Ingredients(String name, String needIngredients, String difficultyLevel, boolean isVegan) {
+        this.name = name;
+        this.needIngredients = needIngredients;
+        this.difficultyLevel = difficultyLevel;
+        this.isVegan = isVegan;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNeedIngredients() {
+        return needIngredients;
+    }
+
+    public String getDifficultyLevel() {
+        return difficultyLevel;
+    }
+
+    public boolean isVegan() {
+        return isVegan;
+    }
+
+    public void displayMealInformation() {
+        System.out.println("Danie: " + name);
+        System.out.println("Składniki: " + needIngredients);
+        System.out.println("Poziom trudności: " + difficultyLevel);
+        String isVeganString = isVegan ? " tak" : " nie";
+        System.out.println("Czy posiłek jest wegański? " + isVeganString);
+        System.out.println();
+    }
+}
+
+
+
+
